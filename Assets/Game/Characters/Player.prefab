@@ -81,6 +81,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6271692828423700859, guid: 80edb026e783d224f8771fbd9ea8ab9d,
+        type: 3}
+      propertyPath: timeBetweenAttacks
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6970333599910844770, guid: 80edb026e783d224f8771fbd9ea8ab9d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -89,7 +94,7 @@ PrefabInstance:
     - target: {fileID: 6970333599910844770, guid: 80edb026e783d224f8771fbd9ea8ab9d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.45
       objectReference: {fileID: 0}
     - target: {fileID: 6970333599910844770, guid: 80edb026e783d224f8771fbd9ea8ab9d,
         type: 3}

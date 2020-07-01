@@ -12,61 +12,63 @@ namespace RPG.Combat
         [SerializeField] float timeBetweenAttacks = 2f;
         [SerializeField] float weaponDamge = 10f;
         
-        Transform target;
+        Health target;
         float timeSinceLastAttack = 0f;
         
         private void Update()
         {
+            timeSinceLastAttack += Time.deltaTime;
+
             if (target == null) return;
+            if (target.IsDead()) return;
 
             CheckDistance();
         }
 
         private void CheckDistance()
-        {
-            timeSinceLastAttack += Time.deltaTime;
+        {   
             if (!GetIsInRange())
             {
-                GetComponent<Mover>().MoveTo(target.position);
+                GetComponent<Mover>().MoveTo(target.transform.position);
             }
             else
             {
                 GetComponent<Mover>().Cancel();
-                if (timeSinceLastAttack >= timeBetweenAttacks)
-                {
-                    AttackBehaviour();
-                    timeSinceLastAttack = 0f;
-                }
+                AttackBehaviour();
             }
         }
 
         private void AttackBehaviour()
         {
+            transform.LookAt(target.transform);
             // This will trigger the HitEvent() in animation event.
-            GetComponent<Animator>().SetTrigger("attack");
+            if (timeSinceLastAttack >= timeBetweenAttacks)
+            {
+                GetComponent<Animator>().SetTrigger("attack");
+                timeSinceLastAttack = 0f;
+            }
         }
 
         public void HitEvent() // Animation event reference
         {
-           Health healthComponent = target.GetComponent<Health>();
-           healthComponent.TakeDamage(weaponDamge);
+            target.TakeDamage(weaponDamge);
+
         }
 
         private bool GetIsInRange()
         {
-            return Vector3.Distance(target.position, transform.position) <= distanteRange;
+            return Vector3.Distance(target.transform.position, transform.position) <= distanteRange;
         }
 
         public void Attack(CombatTarget combatTarget)
         {
-            target = combatTarget.transform;
             GetComponent<ActionScheduler>().StartAction(this);
+            target = combatTarget.GetComponent<Health>();
         }
 
         public void Cancel(){
+            GetComponent<Animator>().SetTrigger("stopAttack");
             target = null;
         }
-
-
     }
 }
