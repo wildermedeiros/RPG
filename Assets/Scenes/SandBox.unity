@@ -697,7 +697,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 50
+  field of view: 65
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -722,8 +722,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: -0.3967272, y: 0.000000105514005, z: -0.0000011059337, w: -0.9179366}
-  m_LocalPosition: {x: -0.000013675954, y: 16.016819, z: -13.704302}
+  m_LocalRotation: {x: 0.46174863, y: -0, z: -0, w: 0.8870109}
+  m_LocalPosition: {x: 0, y: 17.833042, z: -11.471529}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1489259554}
@@ -1092,7 +1092,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 333876612}
   m_Lens:
-    FieldOfView: 50
+    FieldOfView: 65
     OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
@@ -1113,14 +1113,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1199690413}
-  m_LocalRotation: {x: -0.3967272, y: 0.000000105514005, z: -0.0000011059337, w: -0.9179366}
-  m_LocalPosition: {x: -0.000013675954, y: 16.016819, z: -13.704302}
+  m_LocalRotation: {x: 0.46174863, y: 0, z: 0, w: 0.8870109}
+  m_LocalPosition: {x: 0, y: 17.833042, z: -11.471529}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 782082702}
   m_Father: {fileID: 1489259554}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 46.747, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 55, y: 0, z: 0}
 --- !u!1001 &1355364926
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3722,6 +3722,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.99999994
       objectReference: {fileID: 0}
+    - target: {fileID: 1399553790522343846, guid: 78a26854d7e4fbe449220902e7337e16,
+        type: 3}
+      propertyPath: timeBetweenAttacks
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2656605761560009151, guid: 78a26854d7e4fbe449220902e7337e16,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3780,6 +3785,11 @@ PrefabInstance:
     - target: {fileID: 9206368834289414166, guid: 78a26854d7e4fbe449220902e7337e16,
         type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206368834289414166, guid: 78a26854d7e4fbe449220902e7337e16,
+        type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -46,9 +46,15 @@ namespace RPG.Combat
             // This will trigger the HitEvent() in animation event.
             if (timeSinceLastAttack >= timeBetweenAttacks)
             {
-                GetComponent<Animator>().SetTrigger("attack");
+                TriggerAttack();
                 timeSinceLastAttack = 0f;
             }
+        }
+
+        private void TriggerAttack()
+        {
+            GetComponent<Animator>().ResetTrigger("stopAttack");
+            GetComponent<Animator>().SetTrigger("attack");
         }
 
         public void HitEvent() // Animation event reference
@@ -76,9 +82,16 @@ namespace RPG.Combat
             target = combatTarget.GetComponent<Health>();
         }
 
-        public void Cancel(){
-            GetComponent<Animator>().SetTrigger("stopAttack");
+        public void Cancel()
+        {
+            StopAttack();
             target = null;
+        }
+
+        private void StopAttack()
+        {
+            GetComponent<Animator>().ResetTrigger("attack");
+            GetComponent<Animator>().SetTrigger("stopAttack");
         }
     }
 }
