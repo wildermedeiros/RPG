@@ -25,6 +25,8 @@ namespace RPG.Combat
             CheckDistance();
         }
 
+
+
         private void CheckDistance()
         {   
             if (!GetIsInRange())
@@ -51,13 +53,21 @@ namespace RPG.Combat
 
         public void HitEvent() // Animation event reference
         {
-            target.TakeDamage(weaponDamge);
+            if(target == null) return;
 
+            target.TakeDamage(weaponDamge);
         }
 
         private bool GetIsInRange()
         {
             return Vector3.Distance(target.transform.position, transform.position) <= distanteRange;
+        }
+
+        public bool CanAttack(CombatTarget combatTarget)
+        {
+            if(combatTarget == null) return false; 
+            Health targetToTest = combatTarget.GetComponent<Health>();
+            return targetToTest != null && !targetToTest.IsDead();
         }
 
         public void Attack(CombatTarget combatTarget)

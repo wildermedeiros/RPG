@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace RPG.Combat
 {
@@ -29,6 +30,7 @@ namespace RPG.Combat
             
             isDead = true;
             GetComponent<Animator>().SetTrigger("die");
+            //GetComponent<NavMeshAgent>().enabled = false;
         }
     }
 }
