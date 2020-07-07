@@ -10,7 +10,7 @@ namespace RPG.Combat
     {
         [SerializeField] float distanteRange = 2f;
         [SerializeField] float timeBetweenAttacks = 2f;
-        [SerializeField] float weaponDamge = 10f;
+        [SerializeField] float weaponDamage = 10f;
         
         Health target;
         float timeSinceLastAttack = 0f;
@@ -24,8 +24,6 @@ namespace RPG.Combat
 
             CheckDistance();
         }
-
-
 
         private void CheckDistance()
         {   
@@ -61,7 +59,7 @@ namespace RPG.Combat
         {
             if(target == null) return;
 
-            target.TakeDamage(weaponDamge);
+            target.TakeDamage(weaponDamage);
         }
 
         private bool GetIsInRange()
@@ -69,14 +67,14 @@ namespace RPG.Combat
             return Vector3.Distance(target.transform.position, transform.position) <= distanteRange;
         }
 
-        public bool CanAttack(CombatTarget combatTarget)
+        public bool CanAttack(GameObject combatTarget)
         {
-            if(combatTarget == null) return false; 
+            if(combatTarget == null) return false;  // TODO i think this is unnecesseray 
             Health targetToTest = combatTarget.GetComponent<Health>();
             return targetToTest != null && !targetToTest.IsDead();
         }
 
-        public void Attack(CombatTarget combatTarget)
+        public void Attack(GameObject combatTarget)
         {
             GetComponent<ActionScheduler>().StartAction(this);
             target = combatTarget.GetComponent<Health>();
@@ -92,6 +90,11 @@ namespace RPG.Combat
         {
             GetComponent<Animator>().ResetTrigger("attack");
             GetComponent<Animator>().SetTrigger("stopAttack");
+        }
+
+        private void OnDrawGizmos() {
+            Gizmos.color = Color.blue;
+            Gizmos.DrawWireSphere(transform.position, distanteRange);
         }
     }
 }
