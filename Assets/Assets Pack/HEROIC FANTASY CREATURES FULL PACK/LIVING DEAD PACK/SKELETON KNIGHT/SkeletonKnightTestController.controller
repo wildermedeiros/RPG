@@ -32,7 +32,7 @@ BlendTree:
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
     m_Mirror: 0
-  m_BlendParameter: fowardSpeed
+  m_BlendParameter: forwardSpeed
   m_BlendParameterY: Blend
   m_MinThreshold: 0
   m_MaxThreshold: 1
@@ -122,7 +122,7 @@ AnimatorController:
   m_Name: SkeletonKnightTestController
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: fowardSpeed
+  - m_Name: forwardSpeed
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -1266,7 +1266,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: cac642f1cff351b45a80dbd0bebc0f60, type: 3}
+  m_Motion: {fileID: 7400000, guid: 30ce982c48f56e24f958253f5e46bb79, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

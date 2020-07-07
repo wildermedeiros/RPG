@@ -21,7 +21,7 @@ namespace RPG.Control
 
         private void Update()
         {
-            if (InAttackRange() && fighter.CanAttack(player.gameObject))
+            if (InAttackRangeOfPlayer() && fighter.CanAttack(player.gameObject))
             {
                 GetComponent<Fighter>().Attack(player.gameObject);
             }
@@ -31,7 +31,7 @@ namespace RPG.Control
             }
         }
 
-        private bool InAttackRange()
+        private bool InAttackRangeOfPlayer()
         {
             return Vector3.Distance(player.transform.position, transform.position) < chaseDistance;
         }

@@ -70,6 +70,11 @@ PrefabInstance:
       propertyPath: distanteRange
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6271692828423700859, guid: 80edb026e783d224f8771fbd9ea8ab9d,
+        type: 3}
+      propertyPath: timeBetweenAttacks
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6689085447115435748, guid: 80edb026e783d224f8771fbd9ea8ab9d,
         type: 3}
       propertyPath: health
