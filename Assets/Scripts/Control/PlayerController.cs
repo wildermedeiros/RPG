@@ -1,4 +1,5 @@
 ﻿using RPG.Combat;
+using RPG.Core;
 using RPG.Movement;
 using System;
 using System.Collections;
@@ -9,8 +10,16 @@ namespace RPG.Control
 {
     public class PlayerController : MonoBehaviour
     {
+        Health health;
+
+        private void Start() 
+        {
+            health = GetComponent<Health>();    
+        }
+
         void Update()
         {
+            if(health.IsDead()) { return; }
             if (InteractWithCombat()) { return; }
             if (InteractWithMovement()) { return; }
             //print("nothing to do.");
@@ -35,6 +44,7 @@ namespace RPG.Control
             return false;
         }
 
+        // Como fazer a movimentação para ela não travar em objetos que estiverem na frente do terreno
         private bool InteractWithMovement()
         {
             RaycastHit hit;

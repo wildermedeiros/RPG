@@ -1,6 +1,7 @@
 using UnityEngine;
 using RPG.Combat;
 using RPG.Movement;
+using RPG.Core;
 
 // TODO checar o porque da animação da caveirinha não estar rolando
 
@@ -12,15 +13,19 @@ namespace RPG.Control
 
         GameObject player;
         Fighter fighter;
+        Health health;
 
         private void Start() 
         {
             fighter = GetComponent<Fighter>();
+            health = GetComponent<Health>();
             player = GameObject.FindWithTag("Player");
         }
 
         private void Update()
         {
+            if (health.IsDead()) { return; }
+
             if (InAttackRangeOfPlayer() && fighter.CanAttack(player.gameObject))
             {
                 GetComponent<Fighter>().Attack(player.gameObject);
