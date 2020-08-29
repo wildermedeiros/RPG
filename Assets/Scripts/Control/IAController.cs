@@ -35,8 +35,6 @@ namespace RPG.Control
             mover = GetComponent<Mover>();
             player = GameObject.FindWithTag("Player");
 
-
-            //maybe a retunr over here in case of this enemy isn't doing the guard behaviour
             guardPosition = transform.position;
         }
 
