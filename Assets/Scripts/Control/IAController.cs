@@ -4,6 +4,7 @@ using RPG.Combat;
 using RPG.Movement;
 using RPG.Core;
 using System;
+using UnityEngine.AI;
 
 // TODO checar o porque da animação da caveirinha não estar rolando
 
@@ -16,6 +17,8 @@ namespace RPG.Control
         [SerializeField] float waypointDwellTime = 3f;
         [SerializeField] PatrolPath patrolPath;
         [SerializeField] float waypointTollerance = 2f;
+        [Range(0,1)]
+        [SerializeField] float patrolSpeedFraction = 0.2f;
 
         GameObject player;
         Fighter fighter;
@@ -80,7 +83,7 @@ namespace RPG.Control
 
             if (timeSinceArrivedAtWaypoint > waypointDwellTime)
             {
-                mover.StartMoveAction(nextPosition);
+                mover.StartMoveAction(nextPosition, patrolSpeedFraction);
             }
         }
         
