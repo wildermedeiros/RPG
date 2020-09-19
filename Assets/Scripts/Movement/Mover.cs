@@ -10,17 +10,20 @@ namespace RPG.Movement
 {
     public class Mover : MonoBehaviour, IAction
     {
-        [SerializeField] float maxSpeed = 10; 
-
         NavMeshAgent navMeshAgent;
         Animator animator;
         Health health; 
+        
+        [SerializeField] float maxSpeed = 10; 
 
         void Start()
         {
             navMeshAgent = GetComponent<NavMeshAgent>();
             animator = GetComponent<Animator>();
             health = GetComponent<Health>();
+
+            animator.enabled = false; 
+            animator.enabled = true; 
         }
 
         void Update()

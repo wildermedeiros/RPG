@@ -55,7 +55,8 @@ namespace RPG.Combat
             GetComponent<Animator>().SetTrigger("attack");
         }
 
-        public void HitEvent() // Animation event reference
+        // Animation event reference
+        public void HitEvent() 
         {
             if(target == null) return;
 
