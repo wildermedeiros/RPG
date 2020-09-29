@@ -1156,16 +1156,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal A
       objectReference: {fileID: 0}
-    - target: {fileID: 1933250731794539672, guid: 5a1dc51e501c77f4a8e3ed7790a7f25a,
-        type: 3}
-      propertyPath: sceneIndex
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1933250731794539672, guid: 5a1dc51e501c77f4a8e3ed7790a7f25a,
-        type: 3}
-      propertyPath: destination
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3072134774411496144, guid: 5a1dc51e501c77f4a8e3ed7790a7f25a,
         type: 3}
       propertyPath: m_LocalPosition.x
