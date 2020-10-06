@@ -29474,5 +29474,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.1873981
       objectReference: {fileID: 0}
+    - target: {fileID: 8719132614040842659, guid: 117dd163362cb16469e988d25ff667ce,
+        type: 3}
+      propertyPath: weaponPrefab
+      value: 
+      objectReference: {fileID: 3032698668027486094, guid: 0158179c8f140bd4aa06873e14903b60,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 117dd163362cb16469e988d25ff667ce, type: 3}

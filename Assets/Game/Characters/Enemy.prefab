@@ -175,6 +175,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: SKELETON_KNIGHT_PBR
       objectReference: {fileID: 0}
+    - target: {fileID: 147504, guid: 3b2478f1915ecec40b434b3372eab685, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 196916, guid: 3b2478f1915ecec40b434b3372eab685, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198914, guid: 3b2478f1915ecec40b434b3372eab685, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 469770, guid: 3b2478f1915ecec40b434b3372eab685, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

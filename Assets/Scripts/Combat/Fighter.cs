@@ -11,10 +11,16 @@ namespace RPG.Combat
         [SerializeField] float distanteRange = 2f;
         [SerializeField] float timeBetweenAttacks = 2f;
         [SerializeField] float weaponDamage = 10f;
+        [SerializeField] GameObject weaponPrefab;
+        [SerializeField] Transform handPosition; 
         
         Health target;
         float timeSinceLastAttack = Mathf.Infinity;
         
+        private void Start() {
+            SpawnWeapon();
+        }
+
         private void Update()
         {
             timeSinceLastAttack += Time.deltaTime;
@@ -81,12 +87,6 @@ namespace RPG.Combat
             target = combatTarget.GetComponent<Health>();
         }
 
-        public void Cancel()
-        {
-            StopAttack();
-            target = null;
-        }
-
         private void StopAttack()
         {
             GetComponent<Animator>().ResetTrigger("attack");
@@ -96,6 +96,17 @@ namespace RPG.Combat
         private void OnDrawGizmos() {
             Gizmos.color = Color.blue;
             Gizmos.DrawWireSphere(transform.position, distanteRange);
+        }
+
+        void SpawnWeapon()
+        {
+            Instantiate(weaponPrefab, handPosition);
+        }
+
+        public void Cancel()
+        {
+            StopAttack();
+            target = null;
         }
     }
 }
