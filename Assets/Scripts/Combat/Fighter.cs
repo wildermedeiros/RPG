@@ -11,8 +11,8 @@ namespace RPG.Combat
         [SerializeField] float distanteRange = 2f;
         [SerializeField] float timeBetweenAttacks = 2f;
         [SerializeField] float weaponDamage = 10f;
-        [SerializeField] GameObject weaponPrefab;
         [SerializeField] Transform handPosition; 
+        [SerializeField] Weapon weapon;
         
         Health target;
         float timeSinceLastAttack = Mathf.Infinity;
@@ -100,7 +100,9 @@ namespace RPG.Combat
 
         void SpawnWeapon()
         {
-            Instantiate(weaponPrefab, handPosition);
+            if (weapon == null) { return; }
+            Animator animator = GetComponent<Animator>();
+            weapon.Spawn(handPosition, animator);
         }
 
         public void Cancel()
