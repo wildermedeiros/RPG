@@ -84,6 +84,17 @@ PrefabInstance:
       propertyPath: timeBetweenAttacks
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6271692828423700859, guid: 80edb026e783d224f8771fbd9ea8ab9d,
+        type: 3}
+      propertyPath: handPosition
+      value: 
+      objectReference: {fileID: 5483514796939738122}
+    - target: {fileID: 6271692828423700859, guid: 80edb026e783d224f8771fbd9ea8ab9d,
+        type: 3}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 7a5d15e39c9cb264d8fd58a1ab28855a,
+        type: 2}
     - target: {fileID: 6689085447115435748, guid: 80edb026e783d224f8771fbd9ea8ab9d,
         type: 3}
       propertyPath: health
@@ -175,9 +186,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: SKELETON_KNIGHT_PBR
       objectReference: {fileID: 0}
+    - target: {fileID: 129798, guid: 3b2478f1915ecec40b434b3372eab685, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 147504, guid: 3b2478f1915ecec40b434b3372eab685, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 166798, guid: 3b2478f1915ecec40b434b3372eab685, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 167344, guid: 3b2478f1915ecec40b434b3372eab685, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 196916, guid: 3b2478f1915ecec40b434b3372eab685, type: 3}
       propertyPath: m_IsActive
@@ -245,3 +268,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b2478f1915ecec40b434b3372eab685, type: 3}
+--- !u!4 &5483514796939738122 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 439748, guid: 3b2478f1915ecec40b434b3372eab685,
+    type: 3}
+  m_PrefabInstance: {fileID: 5483514796940085710}
+  m_PrefabAsset: {fileID: 0}

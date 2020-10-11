@@ -8,17 +8,17 @@ namespace RPG.Combat
 {
     public class Fighter : MonoBehaviour, IAction
     {
-        [SerializeField] float distanteRange = 2f;
         [SerializeField] float timeBetweenAttacks = 2f;
-        [SerializeField] float weaponDamage = 10f;
-        [SerializeField] Transform handPosition; 
-        [SerializeField] Weapon weapon;
+        [SerializeField] Transform handPosition = null; 
+        [SerializeField] Weapon defaultWeapon = null;
         
         Health target;
         float timeSinceLastAttack = Mathf.Infinity;
-        
-        private void Start() {
-            SpawnWeapon();
+        Weapon currentWeapon; 
+
+        private void Start() 
+        {
+            EquipWeapon(defaultWeapon);
         }
 
         private void Update()
@@ -66,12 +66,12 @@ namespace RPG.Combat
         {
             if(target == null) return;
 
-            target.TakeDamage(weaponDamage);
+            target.TakeDamage(currentWeapon.GetDamage());
         }
 
         private bool GetIsInRange()
         {
-            return Vector3.Distance(target.transform.position, transform.position) <= distanteRange;
+            return Vector3.Distance(target.transform.position, transform.position) <= currentWeapon.GetRange();
         }
 
         public bool CanAttack(GameObject combatTarget)
@@ -95,12 +95,12 @@ namespace RPG.Combat
 
         private void OnDrawGizmos() {
             Gizmos.color = Color.blue;
-            Gizmos.DrawWireSphere(transform.position, distanteRange);
+            Gizmos.DrawWireSphere(transform.position, defaultWeapon.GetRange());
         }
 
-        void SpawnWeapon()
+        public void EquipWeapon(Weapon weapon)
         {
-            if (weapon == null) { return; }
+            currentWeapon = weapon;
             Animator animator = GetComponent<Animator>();
             weapon.Spawn(handPosition, animator);
         }
