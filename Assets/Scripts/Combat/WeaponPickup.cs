@@ -6,25 +6,15 @@ namespace RPG.Combat
 {
     public class WeaponPickup : MonoBehaviour
     {
-        [SerializeField] Weapon weaponPickup;
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
+        [SerializeField] Weapon weapon = null;
 
         private void OnTriggerEnter(Collider other)
         {
-            //var player = GameObject.FindWithTag("Player");
+            if (weapon == null) { return; }
+
             if (other.CompareTag("Player"))
             {
-                other.GetComponent<Fighter>().EquipWeapon(weaponPickup);
+                other.GetComponent<Fighter>().EquipWeapon(weapon);
                 Destroy(gameObject);
             }
         }

@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdf89a2e18ded5b40a93cd25bd868fa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponPickup: {fileID: 11400000, guid: 19558ac11451f1d41a1c34baf5f72fe7, type: 2}
+  weapon: {fileID: 11400000, guid: 19558ac11451f1d41a1c34baf5f72fe7, type: 2}
 --- !u!54 &2746706712455635293
 Rigidbody:
   m_ObjectHideFlags: 0
