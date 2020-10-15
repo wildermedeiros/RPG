@@ -1,23 +1,26 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using RPG.Core;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    [SerializeField] Transform target;
     [SerializeField] float speed = 5f;
 
-    void Start()
-    {
-        
-    }
+    float damage = 0;
+    Health target = null;
 
-    // Update is called once per frame
     void Update()
     {
         transform.LookAt(GetAimLocation());
         transform.Translate(Vector3.forward * speed *Time.deltaTime);
+    }
+
+    public void SetTarget(Health target, float damage)
+    {
+        this.target = target;
+        this.damage = damage;
     }
 
     private Vector3 GetAimLocation()
@@ -25,8 +28,17 @@ public class Projectile : MonoBehaviour
         CapsuleCollider targetCollider = target.GetComponent<CapsuleCollider>();
         if (targetCollider == null)
         {
-            return target.position;
+            return target.transform.position;
         }
-        return target.position + Vector3.up * targetCollider.height / 2;  
+        return target.transform.position + Vector3.up * targetCollider.height / 2;  
+    }
+
+    private void OnTriggerEnter(Collider other) 
+    {
+        if (other.GetComponent<Health>())
+        {
+            other.GetComponent<Health>().TakeDamage(damage);
+            Destroy(gameObject);
+        }
     }
 }

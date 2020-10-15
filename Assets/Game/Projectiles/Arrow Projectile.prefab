@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6067060961510060293}
   - component: {fileID: 6853101985064277407}
+  - component: {fileID: 8835033544521941754}
   m_Layer: 0
   m_Name: Arrow Projectile
   m_TagString: Untagged
@@ -44,6 +45,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7985db7b6a6e1b54683719a3e00c263d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 15
+--- !u!65 &8835033544521941754
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6342305781448560529}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.1, z: 1.6}
+  m_Center: {x: 0, y: 0, z: 0.79}
 --- !u!1001 &8870403627966751020
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -98,6 +113,18 @@ PrefabInstance:
     - target: {fileID: 4750687242688692, guid: c7f49c6920d49ba468b083941d79f2c0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4750687242688692, guid: c7f49c6920d49ba468b083941d79f2c0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4750687242688692, guid: c7f49c6920d49ba468b083941d79f2c0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4750687242688692, guid: c7f49c6920d49ba468b083941d79f2c0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7f49c6920d49ba468b083941d79f2c0, type: 3}
