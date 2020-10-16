@@ -35,10 +35,12 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) 
     {
-        if (other.GetComponent<Health>())
-        {
-            other.GetComponent<Health>().TakeDamage(damage);
-            Destroy(gameObject);
-        }
+        if (other.GetComponent<Health>() != target) { return; }
+
+        target.TakeDamage(damage);
+        Destroy(gameObject);
+
+        // posso colocar sem especificar o target, assim ela acerta quem estiver na frente 
     }
+
 }

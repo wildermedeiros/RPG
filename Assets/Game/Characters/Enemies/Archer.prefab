@@ -78,13 +78,13 @@ PrefabInstance:
     - target: {fileID: 4298164721139429579, guid: 80edb026e783d224f8771fbd9ea8ab9d,
         type: 3}
       propertyPath: m_Name
-      value: Enemy 2
+      value: Archer
       objectReference: {fileID: 0}
     - target: {fileID: 6271692828423700859, guid: 80edb026e783d224f8771fbd9ea8ab9d,
         type: 3}
       propertyPath: defaultWeapon
       value: 
-      objectReference: {fileID: 11400000, guid: 7a5d15e39c9cb264d8fd58a1ab28855a,
+      objectReference: {fileID: 11400000, guid: 965753a188188af4ab75b3bebeed2d15,
         type: 2}
     - target: {fileID: 6271692828423700859, guid: 80edb026e783d224f8771fbd9ea8ab9d,
         type: 3}
@@ -104,7 +104,7 @@ PrefabInstance:
     - target: {fileID: 6689085447115435748, guid: 80edb026e783d224f8771fbd9ea8ab9d,
         type: 3}
       propertyPath: healthPoints
-      value: 30
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 6970333599910844770, guid: 80edb026e783d224f8771fbd9ea8ab9d,
         type: 3}
