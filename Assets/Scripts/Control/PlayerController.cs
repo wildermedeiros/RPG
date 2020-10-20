@@ -62,6 +62,9 @@ namespace RPG.Control
             return false;
         }
 
+        // aqui eu posso colocar uma "use habilit" pq dai eu aperto o botão direito do mouse e a abilidade vai na direção que eu cliqeui, 
+        // por exemplo o hit.point 
+
         private static Ray GetMouseRay()
         {
             return Camera.main.ScreenPointToRay(Input.mousePosition);

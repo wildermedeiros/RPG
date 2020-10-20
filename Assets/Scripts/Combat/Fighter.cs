@@ -70,6 +70,10 @@ namespace RPG.Combat
             if(currentWeapon.HasProjectile())
             {
                 currentWeapon.LaunchProjectile(rightHandTransform, leftHandTransform, target);
+            } 
+            else if (currentWeapon.HasMultiProjectiles())
+            {
+                currentWeapon.LaunchMultiProjectiles(rightHandTransform, leftHandTransform, target);
             }
             else
             {

@@ -11,9 +11,15 @@ public class Projectile : MonoBehaviour
     float damage = 0;
     Health target = null;
 
+    private void Start() 
+    {
+        // colocando o lookat aq ele não terá comportamento de heatSeeker
+        transform.LookAt(GetAimLocation());
+    }
+
     void Update()
     {
-        transform.LookAt(GetAimLocation());
+        // colocando o lookat aqui ele terá uma comportamento de heatseeker 
         transform.Translate(Vector3.forward * speed *Time.deltaTime);
     }
 
