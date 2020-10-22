@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbc2372246cefac449280b27cb32d627, type: 3}
-  m_Name: Bow Multiple Arrows
+  m_Name: Bow Multiple Projectiles
   m_EditorClassIdentifier: 
   animatorOverride: {fileID: 0}
   equippedPrefab: {fileID: 4568984370340360013, guid: 164e29120916df149a07bb2ff94e8927,

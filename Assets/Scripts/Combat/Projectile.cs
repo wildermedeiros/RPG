@@ -7,6 +7,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     [SerializeField] float speed = 5f;
+    [SerializeField] bool isHeatSeeker = false;
 
     float damage = 0;
     Health target = null;
@@ -20,6 +21,10 @@ public class Projectile : MonoBehaviour
     void Update()
     {
         // colocando o lookat aqui ele terá uma comportamento de heatseeker 
+        if (isHeatSeeker && !target.IsDead())
+        {
+            transform.LookAt(GetAimLocation());
+        }
         transform.Translate(Vector3.forward * speed *Time.deltaTime);
     }
 
@@ -42,10 +47,12 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter(Collider other) 
     {
         if (other.GetComponent<Health>() != target) { return; }
+        
+        if(target.IsDead()) { return; }
 
         target.TakeDamage(damage);
         Destroy(gameObject);
-
+        // destruir depois de um tempo, ou se colidir com alguma coisa  
         // posso colocar sem especificar o target, assim ela acerta quem estiver na frente 
     }
 
