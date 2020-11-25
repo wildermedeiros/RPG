@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using RPG.Core;
 using UnityEngine;
 
+// TODO IDEIAS 
+//              Sticky arrows 
+
 public class Projectile : MonoBehaviour
 {
     [SerializeField] float speed = 5f;
@@ -46,6 +49,7 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) 
     {
+        // posso colocar sem especificar o target, assim ela acerta quem estiver na frente 
         if (other.GetComponent<Health>() != target) { return; }
         
         if(target.IsDead()) { return; }
@@ -53,7 +57,6 @@ public class Projectile : MonoBehaviour
         target.TakeDamage(damage);
         Destroy(gameObject);
         // destruir depois de um tempo, ou se colidir com alguma coisa  
-        // posso colocar sem especificar o target, assim ela acerta quem estiver na frente 
     }
 
 }

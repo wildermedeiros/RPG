@@ -120,7 +120,7 @@ PrefabInstance:
     - target: {fileID: 6853101985064277407, guid: 8a99e208383dc1d4b9240f5cdfba825f,
         type: 3}
       propertyPath: isHeatSeeker
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6853101985064277407, guid: 8a99e208383dc1d4b9240f5cdfba825f,
         type: 3}
