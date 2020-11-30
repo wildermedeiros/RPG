@@ -62,6 +62,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4080425150256602133, guid: dee6316cd790b3c4f8b401a69afb4f50,
+        type: 3}
+      propertyPath: m_text
+      value: FireBall
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080425150256602133, guid: dee6316cd790b3c4f8b401a69afb4f50,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080425150256602133, guid: dee6316cd790b3c4f8b401a69afb4f50,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080425150256602133, guid: dee6316cd790b3c4f8b401a69afb4f50,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080425150256602133, guid: dee6316cd790b3c4f8b401a69afb4f50,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4837697295640255531, guid: dee6316cd790b3c4f8b401a69afb4f50,
         type: 3}
       propertyPath: weapon
@@ -72,6 +97,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Weapon Pickup FireBall
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902519947570634586, guid: dee6316cd790b3c4f8b401a69afb4f50,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8978087415530606836, guid: dee6316cd790b3c4f8b401a69afb4f50,
         type: 3}

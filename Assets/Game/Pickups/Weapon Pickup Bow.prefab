@@ -79,7 +79,7 @@ PrefabInstance:
     - target: {fileID: 1006239414426319316, guid: dee6316cd790b3c4f8b401a69afb4f50,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2746706712455635293, guid: dee6316cd790b3c4f8b401a69afb4f50,
         type: 3}
@@ -140,6 +140,33 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080425150256602133, guid: dee6316cd790b3c4f8b401a69afb4f50,
+        type: 3}
+      propertyPath: m_text
+      value: 'Bow
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080425150256602133, guid: dee6316cd790b3c4f8b401a69afb4f50,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080425150256602133, guid: dee6316cd790b3c4f8b401a69afb4f50,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080425150256602133, guid: dee6316cd790b3c4f8b401a69afb4f50,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080425150256602133, guid: dee6316cd790b3c4f8b401a69afb4f50,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4837697295640255531, guid: dee6316cd790b3c4f8b401a69afb4f50,
         type: 3}
