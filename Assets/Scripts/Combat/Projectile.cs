@@ -11,6 +11,7 @@ public class Projectile : MonoBehaviour
 {
     [SerializeField] float speed = 5f;
     [SerializeField] bool isHeatSeeker = false;
+    [SerializeField] GameObject hitEffect = null; 
 
     float damage = 0;
     Health target = null;
@@ -55,6 +56,13 @@ public class Projectile : MonoBehaviour
         if(target.IsDead()) { return; }
 
         target.TakeDamage(damage);
+        
+        if (hitEffect != null)
+        {
+            Instantiate(hitEffect, GetAimLocation(), transform.rotation);
+                                                    //Quaternion.LookRotation(target.transform.forward, target.transform.up)
+        }
+
         Destroy(gameObject);
         // destruir depois de um tempo, ou se colidir com alguma coisa  
     }
