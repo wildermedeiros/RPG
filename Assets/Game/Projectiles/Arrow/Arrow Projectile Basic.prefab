@@ -50,6 +50,10 @@ MonoBehaviour:
   isHeatSeeker: 0
   hitEffect: {fileID: 2292403760075348542, guid: 8efe8ec4c83cdf847a57e920ae0e112d,
     type: 3}
+  maxLifeTime: 10
+  destroyOnHit:
+  - {fileID: 8872060845841557202}
+  lifeTimeAfterImpact: 2
 --- !u!65 &8835033544521941754
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -278,6 +282,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7f49c6920d49ba468b083941d79f2c0, type: 3}
+--- !u!1 &8872060845841557202 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1659504181823486, guid: c7f49c6920d49ba468b083941d79f2c0,
+    type: 3}
+  m_PrefabInstance: {fileID: 8870403627966751020}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8866146909761403288 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4750687242688692, guid: c7f49c6920d49ba468b083941d79f2c0,
