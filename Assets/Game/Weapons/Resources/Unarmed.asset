@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbc2372246cefac449280b27cb32d627, type: 3}
-  m_Name: 2Handed Skeleton Sword
+  m_Name: Unarmed
   m_EditorClassIdentifier: 
-  animatorOverride: {fileID: 22100000, guid: f134183059ca7bb438fcd22ad8e0a476, type: 2}
-  equippedPrefab: {fileID: 7666843140648376996, guid: 46ba82a83566ed949ae675e361d932cd,
-    type: 3}
-  weaponDamage: 20
-  weaponRange: 4
+  animatorOverride: {fileID: 0}
+  equippedPrefab: {fileID: 0}
+  weaponDamage: 3
+  weaponRange: 2
+  isRightHanded: 1
+  projectile: {fileID: 0}
+  multiProjectiles: {fileID: 0}

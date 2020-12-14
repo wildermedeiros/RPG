@@ -10,10 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbc2372246cefac449280b27cb32d627, type: 3}
-  m_Name: Skeleton Bone
+  m_Name: Skeleton Sword
   m_EditorClassIdentifier: 
   animatorOverride: {fileID: 0}
-  equippedPrefab: {fileID: 4169519742799379023, guid: 6ec0a08f2a3e7e6499c43d34800846be,
+  equippedPrefab: {fileID: 1797692867004684944, guid: eadbe69370cb95c41b09dacc3d883680,
     type: 3}
-  weaponDamage: 8
-  weaponRange: 5
+  weaponDamage: 10
+  weaponRange: 2
+  isRightHanded: 1
+  projectile: {fileID: 0}
+  multiProjectiles: {fileID: 0}
