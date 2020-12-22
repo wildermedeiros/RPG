@@ -75,7 +75,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7668682571784449012}
   m_LocalRotation: {x: -0.41854063, y: -0.36307368, z: 0.1873981, w: -0.8111}
-  m_LocalPosition: {x: -44.20277, y: 21.825882, z: -78.85006}
+  m_LocalPosition: {x: -39.09221, y: 17.750704, z: -77.53005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7668682572345215655}
@@ -322,7 +322,7 @@ MonoBehaviour:
   m_ZDamping: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.5
-  m_CameraDistance: 25
+  m_CameraDistance: 20
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
@@ -400,7 +400,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7668682572491658280}
   m_LocalRotation: {x: -0.41854063, y: -0.36307368, z: 0.1873981, w: -0.8111}
-  m_LocalPosition: {x: -44.20277, y: 21.825882, z: -78.85006}
+  m_LocalPosition: {x: -39.09221, y: 17.750704, z: -77.53005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7668682572104492043}
@@ -3079,6 +3079,17 @@ PrefabInstance:
       propertyPath: timeBetweenAttacks
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1399553790522343846, guid: 78a26854d7e4fbe449220902e7337e16,
+        type: 3}
+      propertyPath: defaultWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 9c7dd878831060d47ade976efd7dceab,
+        type: 2}
+    - target: {fileID: 1399553790522343846, guid: 78a26854d7e4fbe449220902e7337e16,
+        type: 3}
+      propertyPath: defaultWeaponName
+      value: Sword
+      objectReference: {fileID: 0}
     - target: {fileID: 1779439043933728313, guid: 78a26854d7e4fbe449220902e7337e16,
         type: 3}
       propertyPath: healthPoints
@@ -3087,7 +3098,7 @@ PrefabInstance:
     - target: {fileID: 2656605761560009151, guid: 78a26854d7e4fbe449220902e7337e16,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -33.4
+      value: -30.45
       objectReference: {fileID: 0}
     - target: {fileID: 2656605761560009151, guid: 78a26854d7e4fbe449220902e7337e16,
         type: 3}
@@ -3097,7 +3108,7 @@ PrefabInstance:
     - target: {fileID: 2656605761560009151, guid: 78a26854d7e4fbe449220902e7337e16,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -69.2
+      value: -69.81
       objectReference: {fileID: 0}
     - target: {fileID: 2656605761560009151, guid: 78a26854d7e4fbe449220902e7337e16,
         type: 3}

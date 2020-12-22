@@ -14,7 +14,7 @@ namespace RPG.SceneManagement
             A, B, C, D, E, F, G
         }
 
-        [SerializeField] int sceneIndex = -1;
+        [SerializeField] int sceneToLoad = -1;
         [SerializeField] Transform spawnPoint;
         [SerializeField] DestinationIdentifier destination;
         [SerializeField] float fadeOutTime = 1f;
@@ -31,21 +31,21 @@ namespace RPG.SceneManagement
 
         private IEnumerator Transition()
         {
-            if (sceneIndex < 0)
+            if (sceneToLoad < 0)
             {
                 Debug.LogError("Scene to load not set");
                 yield break;
             }
 
-            Fader fader = FindObjectOfType<Fader>();
             DontDestroyOnLoad(gameObject);
+            Fader fader = FindObjectOfType<Fader>();
 
             yield return fader.FadeOut(fadeOutTime);
 
             SavingWrapper savingWrapper = FindObjectOfType<SavingWrapper>();
             savingWrapper.Save();
 
-            yield return SceneManager.LoadSceneAsync(sceneIndex);
+            yield return SceneManager.LoadSceneAsync(sceneToLoad);
 
             savingWrapper.Load();
 
@@ -53,7 +53,7 @@ namespace RPG.SceneManagement
             UpdatePlayer(otherPortal);
 
             savingWrapper.Save();
-
+            
             yield return new WaitForSeconds(fadeWaitTime);
             yield return fader.FadeIn(fadeInTime);
 
