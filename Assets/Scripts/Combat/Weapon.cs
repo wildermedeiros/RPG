@@ -70,18 +70,18 @@ namespace RPG.Combat
             return multiProjectiles != null;
         }
 
-        public void LaunchProjectile(Transform rightHand, Transform leftHand, Health target)
+        public void LaunchProjectile(Transform rightHand, Transform leftHand, Health target, GameObject instigator)
         {
             Projectile projectileInstance = Instantiate(projectile, GetTransform(rightHand, leftHand).position, Quaternion.identity);
-            projectileInstance.SetTarget(target, weaponDamage); 
+            projectileInstance.SetTarget(target, instigator, weaponDamage); 
         }
 
-        public void LaunchMultiProjectiles(Transform rightHand, Transform leftHand, Health target)
+        public void LaunchMultiProjectiles(Transform rightHand, Transform leftHand, Health target, GameObject instigator)
         {
             GameObject multiProjectilesInstance = Instantiate(multiProjectiles, GetTransform(rightHand, leftHand).position, Quaternion.identity);
             foreach (Transform child in multiProjectilesInstance.transform)
             {
-                child.GetComponent<Projectile>().SetTarget(target, weaponDamage);
+                child.GetComponent<Projectile>().SetTarget(target, instigator, weaponDamage);
             }
         }
 

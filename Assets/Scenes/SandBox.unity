@@ -30378,7 +30378,7 @@ PrefabInstance:
     - target: {fileID: 5796319252175858649, guid: 117dd163362cb16469e988d25ff667ce,
         type: 3}
       propertyPath: startingLevel
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7668682571385790584, guid: 117dd163362cb16469e988d25ff667ce,
         type: 3}
@@ -30499,7 +30499,7 @@ PrefabInstance:
         type: 3}
       propertyPath: defaultWeapon
       value: 
-      objectReference: {fileID: 11400000, guid: 7a5d15e39c9cb264d8fd58a1ab28855a,
+      objectReference: {fileID: 11400000, guid: 19558ac11451f1d41a1c34baf5f72fe7,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 117dd163362cb16469e988d25ff667ce, type: 3}

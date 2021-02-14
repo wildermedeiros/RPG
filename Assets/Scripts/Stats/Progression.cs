@@ -13,7 +13,7 @@ namespace RPG.Stats
             {
                 if(character.characterClass == characterClass)
                 {
-                    return character.health[level - 1];
+                    //return character.health[level - 1];
                 }
             }
             return 0;
@@ -23,7 +23,14 @@ namespace RPG.Stats
         class ProgressionCharacterClass
         {
             public CharacterClass characterClass;
-            public float[] health;
+            public ProgressionStat[] progressionStats; 
+        }
+
+        [System.Serializable]
+        class ProgressionStat
+        {
+            public Stat stats;
+            public float[] levels; 
         }
     }
 }
