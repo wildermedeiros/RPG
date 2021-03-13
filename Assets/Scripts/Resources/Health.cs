@@ -15,8 +15,8 @@ namespace RPG.Resources
 
         private void Start() 
         {
-            healthPoints = GetComponent<BaseStats>().GetHealth();
-            experiencePoints = GetComponent<BaseStats>().GetExperienceReward();
+            healthPoints = GetComponent<BaseStats>().GetStat(Stat.Health);
+            experiencePoints = GetComponent<BaseStats>().GetStat(Stat.ExperienceReward);
         }
 
         public bool IsDead()
@@ -26,8 +26,6 @@ namespace RPG.Resources
 
         public void TakeDamage(GameObject instigator, float damage)
         {
-            if (isDead) { return; }
-
             healthPoints = Mathf.Max(healthPoints - damage, 0); 
             if (healthPoints == 0)
             {
@@ -39,12 +37,12 @@ namespace RPG.Resources
 
         public float GetPercentage()
         {
-            return 100 * (healthPoints / GetComponent<BaseStats>().GetHealth());
+            return 100 * (healthPoints / GetComponent<BaseStats>().GetStat(Stat.Health));
         }
 
         private void DieBehaviour()
         {
-            //if (isDead) return; Replaced in TakeDamage method 
+            if (isDead) return; 
             
             isDead = true;
             GetComponent<Animator>().SetTrigger("die");

@@ -68,7 +68,7 @@ namespace RPG.Combat
         // Animation event reference
         public void HitEvent() 
         {
-            if(target == null) return;
+            if(target == null || target.IsDead()) { return; }
 
             if(currentWeapon.HasProjectile())
             {

@@ -59,6 +59,7 @@ namespace RPG.Combat
             // posso colocar sem especificar o target, assim ela acerta quem estiver na frente 
             if (other.GetComponent<Health>() != target) { return; }
             if (target.IsDead()) { return; }
+            
             target.TakeDamage(instigator, damage);
 
             speed = 0;
