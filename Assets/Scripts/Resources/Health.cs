@@ -29,8 +29,7 @@ namespace RPG.Resources
             healthPoints = Mathf.Max(healthPoints - damage, 0); 
             if (healthPoints == 0)
             {
-                //instigator.GetComponent<ActionScheduler>().CancelCurrentAction();
-                DieBehaviour();
+                Die();
                 AwardExperiencePoints(instigator);
             }
         }
@@ -40,7 +39,7 @@ namespace RPG.Resources
             return 100 * (healthPoints / GetComponent<BaseStats>().GetStat(Stat.Health));
         }
 
-        private void DieBehaviour()
+        private void Die()
         {
             if (isDead) return; 
             
@@ -66,9 +65,9 @@ namespace RPG.Resources
         {
             healthPoints = (float)state;
 
-            if (healthPoints == 0)
+            if (healthPoints <= 0)
             {
-                DieBehaviour();
+                Die();
             }
         }
     }
