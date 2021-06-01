@@ -9,17 +9,17 @@ namespace RPG.Stats
     public class ExperienceDisplay : MonoBehaviour
 {
         Experience experience;
-        TextMeshProUGUI percentageText;
+        TextMeshProUGUI experienceAmountText;
 
         private void Awake()
         {
             experience = GameObject.FindWithTag("Player").GetComponent<Experience>();
-            percentageText = GetComponent<TextMeshProUGUI>();
+            experienceAmountText = GetComponent<TextMeshProUGUI>();
         }
 
         void Update()
         {
-            percentageText.text = String.Format("{0:0}", experience.GetPoints());
+            experienceAmountText.text = String.Format("{0:0}", experience.GetPoints());
         }
     }
 

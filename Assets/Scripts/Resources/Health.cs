@@ -8,14 +8,19 @@ namespace RPG.Resources
 {
     public class Health : MonoBehaviour, ISaveable
     {
-        [SerializeField] float healthPoints = 100f;
+        [SerializeField] float healthPoints = -1;
 
         float experiencePoints; 
         bool isDead = false;
+        bool hasRestored = false; 
 
         private void Start() 
         {
-            healthPoints = GetComponent<BaseStats>().GetStat(Stat.Health);
+            if(healthPoints < 0) 
+            {  
+                healthPoints = GetComponent<BaseStats>().GetStat(Stat.Health);
+            }   
+            
             experiencePoints = GetComponent<BaseStats>().GetStat(Stat.ExperienceReward);
         }
 
@@ -63,6 +68,7 @@ namespace RPG.Resources
 
         public void RestoreState(object state)
         {
+            hasRestored = true; 
             healthPoints = (float)state;
 
             if (healthPoints <= 0)

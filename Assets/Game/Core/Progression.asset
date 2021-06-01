@@ -28,6 +28,7 @@ MonoBehaviour:
       - 30
       - 40
       - 50
+      - 60
   - characterClass: 7
     stats:
     - stat: 0
