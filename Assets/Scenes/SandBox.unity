@@ -30560,6 +30560,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8276899554313297468, guid: 117dd163362cb16469e988d25ff667ce,
+        type: 3}
+      propertyPath: healthPoints
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 8443343433963999213, guid: 117dd163362cb16469e988d25ff667ce,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -30589,7 +30594,7 @@ PrefabInstance:
         type: 3}
       propertyPath: defaultWeapon
       value: 
-      objectReference: {fileID: 11400000, guid: 19558ac11451f1d41a1c34baf5f72fe7,
+      objectReference: {fileID: 11400000, guid: 9c7dd878831060d47ade976efd7dceab,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 117dd163362cb16469e988d25ff667ce, type: 3}
