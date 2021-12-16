@@ -296,6 +296,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fader Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2249469295414123774, guid: addde01cfc040394bbe871d42f85426b,
+        type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: addde01cfc040394bbe871d42f85426b, type: 3}
 --- !u!224 &6000883676316519487 stripped

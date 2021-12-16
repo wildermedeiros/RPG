@@ -19,7 +19,7 @@ namespace RPG.Resources
 
         void Update()
         {
-            percentageText.text = String.Format("{0:0}%", health.GetPercentage()); 
+            percentageText.text = String.Format("{0:0}/{1:0}", health.GetHealthPoints(), health.GetMaxHealthPoints());
         }
     }
 

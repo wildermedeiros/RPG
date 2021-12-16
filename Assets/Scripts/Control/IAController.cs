@@ -55,7 +55,6 @@ namespace RPG.Control
             else 
             {
                 PatrolBehaviour();
-                
             }
             UpdateTimers();
         }
