@@ -30637,6 +30637,11 @@ PrefabInstance:
       propertyPath: m_textInfo.characterCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4134506260903075045, guid: 117dd163362cb16469e988d25ff667ce,
+        type: 3}
+      propertyPath: uniqueIdentifier
+      value: 4c6542e4-1d0e-41ad-b7e2-07ae8e9cefc0
+      objectReference: {fileID: 0}
     - target: {fileID: 4173945953101866462, guid: 117dd163362cb16469e988d25ff667ce,
         type: 3}
       propertyPath: m_textInfo.lineCount
@@ -30871,7 +30876,7 @@ PrefabInstance:
         type: 3}
       propertyPath: defaultWeapon
       value: 
-      objectReference: {fileID: 11400000, guid: 9c7dd878831060d47ade976efd7dceab,
+      objectReference: {fileID: 11400000, guid: 19558ac11451f1d41a1c34baf5f72fe7,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 117dd163362cb16469e988d25ff667ce, type: 3}

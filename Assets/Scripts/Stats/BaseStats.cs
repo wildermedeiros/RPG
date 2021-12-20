@@ -58,9 +58,19 @@ namespace RPG.Stats
             return currentLevel;
         }
 
+        // TODO quando chega no level maximo ele reseta o dano base do personagem
         private float GetAdditiveModifier(Stat stat)
         {
-            return 1;
+            IModifierProvider[] modifierProviders = GetComponents<IModifierProvider>();
+            float total = 0;
+            foreach (IModifierProvider provider in modifierProviders)
+            {
+                foreach (float modifier in provider.GetAdditiveModifier(stat))
+                {
+                    total += modifier; 
+                }
+            }
+            return total;
         }
 
         private int CalculateLevel()
