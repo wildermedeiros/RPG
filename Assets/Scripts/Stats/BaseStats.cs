@@ -12,6 +12,7 @@ namespace RPG.Stats
         [SerializeField] CharacterClass characterClass; 
         [SerializeField] Progression progression = null;
         [SerializeField] GameObject levelUpParticleEffect = null;
+        [SerializeField] bool shouldUseModifiers = false;
 
         public event Action onLevelUp;
 
@@ -46,7 +47,12 @@ namespace RPG.Stats
 
         public float GetStat(Stat stat)
         {
-            return progression.GetStat(stat, characterClass, GetLevel()) + GetAdditiveModifier(stat);
+            return GetBaseStat(stat) + GetAdditiveModifier(stat) * (1 + GetPercentageModifier(stat)/100);
+        }
+
+        private float GetBaseStat(Stat stat)
+        {
+            return progression.GetStat(stat, characterClass, GetLevel());
         }
 
         public int GetLevel()
@@ -61,13 +67,31 @@ namespace RPG.Stats
         // TODO quando chega no level maximo ele reseta o dano base do personagem
         private float GetAdditiveModifier(Stat stat)
         {
+            if (!shouldUseModifiers) { return 0; }
+
             IModifierProvider[] modifierProviders = GetComponents<IModifierProvider>();
             float total = 0;
             foreach (IModifierProvider provider in modifierProviders)
             {
-                foreach (float modifier in provider.GetAdditiveModifier(stat))
+                foreach (float modifier in provider.GetAdditiveModifiers(stat))
                 {
                     total += modifier; 
+                }
+            }
+            return total;
+        }
+
+        private float GetPercentageModifier(Stat stat)
+        {
+            if (!shouldUseModifiers) { return 0; }
+
+            IModifierProvider[] modifierProviders = GetComponents<IModifierProvider>();
+            float total = 0;
+            foreach (IModifierProvider provider in modifierProviders)
+            {
+                foreach (float modifier in provider.GetPercentageModifiers(stat))
+                {
+                    total += modifier;
                 }
             }
             return total;

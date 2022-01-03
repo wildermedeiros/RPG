@@ -7,7 +7,7 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
-	"last_search.785D90A9" = "progression"
+	"last_search.785D90A9" = "resource"
 	"OpenInspectorPreview.785D90A9" = "0"
 	"currentGroup.785D90A9" = "all"
 }
@@ -84,6 +84,7 @@ providers = {
 	}
 }
 recentSearches = [
+	"we"
 	"pr"
 ]
 searchItemFavorites = [
