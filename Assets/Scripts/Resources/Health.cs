@@ -11,8 +11,21 @@ namespace RPG.Resources
         [SerializeField] float regenerationPercentage = 80f;
 
         float healthPoints = -1;
-        float experiencePoints; 
         bool isDead = false;
+        BaseStats baseStats;
+
+        private void Awake() 
+        {
+            BaseStats baseStats = GetComponent<BaseStats>();
+        }
+
+        private void OnEnable() {
+            baseStats.onLevelUp += RegenerateHealth;
+        }
+
+        private void OnDisable() {
+            baseStats.onLevelUp -= RegenerateHealth;
+        }
 
         private void Start() 
         {
@@ -20,10 +33,6 @@ namespace RPG.Resources
             {  
                 healthPoints = GetComponent<BaseStats>().GetStat(Stat.Health);
             }   
-            experiencePoints = GetComponent<BaseStats>().GetStat(Stat.ExperienceReward);
-
-            BaseStats baseStats = GetComponent<BaseStats>();
-            baseStats.onLevelUp += RegenerateHealth;
         }
 
         private void RegenerateHealth()
@@ -78,6 +87,7 @@ namespace RPG.Resources
             Experience experience = instigator.GetComponent<Experience>();
             if (experience == null) { return; }
 
+            float experiencePoints = GetComponent<BaseStats>().GetStat(Stat.ExperienceReward);
             experience.GainExperience(experiencePoints);
         }
 

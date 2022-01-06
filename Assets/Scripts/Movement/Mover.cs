@@ -14,12 +14,15 @@ namespace RPG.Movement
         
         [SerializeField] float maxSpeed = 10; 
 
-        void Start()
+        private void Awake() 
         {
             navMeshAgent = GetComponent<NavMeshAgent>();
             animator = GetComponent<Animator>();
             health = GetComponent<Health>();
+        }
 
+        void Start()
+        {
             animator.enabled = false; 
             animator.enabled = true; 
         }

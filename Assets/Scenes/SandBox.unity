@@ -30787,6 +30787,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -77.53005
       objectReference: {fileID: 0}
+    - target: {fileID: 7668682571784449014, guid: 117dd163362cb16469e988d25ff667ce,
+        type: 3}
+      propertyPath: field of view
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 7668682572491658282, guid: 117dd163362cb16469e988d25ff667ce,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -30801,6 +30806,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -77.53005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7668682572491658283, guid: 117dd163362cb16469e988d25ff667ce,
+        type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7668682572491658283, guid: 117dd163362cb16469e988d25ff667ce,
+        type: 3}
+      propertyPath: m_Lens.m_SensorSize.x
+      value: 1.7777778
       objectReference: {fileID: 0}
     - target: {fileID: 7995690361725559350, guid: 117dd163362cb16469e988d25ff667ce,
         type: 3}
