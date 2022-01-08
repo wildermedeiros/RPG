@@ -10,7 +10,7 @@ namespace RPG.SceneManagement
         CanvasGroup canvasGroup;
         Coroutine currentActiveFade = null;
 
-        private void Start()
+        private void Awake()
         {
             canvasGroup = GetComponent<CanvasGroup>();
         }
