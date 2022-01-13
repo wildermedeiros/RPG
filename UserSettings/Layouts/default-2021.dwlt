@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Console
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 492}
   m_MaxSize: {x: 10000, y: 10000}
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 77
+  controlID: 161
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 17
+  controlID: 162
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 78
+  controlID: 103
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: InspectorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -295,15 +295,15 @@ MonoBehaviour:
     y: 0
     width: 447
     height: 947
-  m_MinSize: {x: 101, y: 121}
+  m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 19}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
   - {fileID: 19}
   - {fileID: 20}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -429,9 +429,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 64f8ffff
+      m_SelectedIDs: 4af2ffff
+      m_LastClickedID: -3510
+      m_ExpandedIDs: 30f8ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -497,22 +497,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Asset Packs/Pixel Cursors/Cursors
+    - Assets/Scripts/Control
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Asset Packs/Pixel Cursors/Cursors
+  - Assets/Scripts/Control
   m_LastFoldersGridSize: 16
   m_LastProjectPath: F:\Unity\Udemy\RPG Core Combat Creator
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 28}
-    m_SelectedIDs: a4650000
-    m_LastClickedID: 26020
-    m_ExpandedIDs: 000000002a6500002c6500002e6500009a6500009c650000a665000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 5a660000
+    m_LastClickedID: 26202
+    m_ExpandedIDs: 00000000546500005665000058650000c2650000c8650000ce65000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -540,7 +540,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000002a6500002c6500002e650000
+    m_ExpandedIDs: 00000000546500005665000058650000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -999,9 +999,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -51.324722, y: 12.523701, z: -42.31597}
+    m_Target: {x: -44.42969, y: 5.696788, z: -63.93393}
     speed: 2
-    m_Value: {x: -51.324722, y: 12.523701, z: -42.31597}
+    m_Value: {x: -44.42969, y: 5.696788, z: -63.93393}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1048,13 +1048,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.34959215, y: -0.3389645, z: 0.13868049, w: -0.86258316}
+    m_Target: {x: -0.3368585, y: -0.4372086, z: 0.18232363, w: -0.8139574}
     speed: 2
-    m_Value: {x: -0.34952337, y: -0.3388978, z: 0.1386532, w: -0.8624134}
+    m_Value: {x: -0.33679223, y: -0.43712255, z: 0.18228775, w: -0.81379724}
   m_Size:
-    m_Target: 25.467796
+    m_Target: 6.025485
     speed: 2
-    m_Value: 25.467796
+    m_Value: 6.025485
   m_Ortho:
     m_Target: 0
     speed: 2

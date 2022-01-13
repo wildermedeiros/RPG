@@ -11,14 +11,6 @@ namespace RPG.Control
     {
         Health health;
 
-        enum CursorType
-        {
-            None, 
-            Combat,
-            Movement,
-            UI
-        }
-
         [System.Serializable]
         struct CursorMapping
         {
@@ -69,13 +61,15 @@ namespace RPG.Control
                 {
                     if (raycastable.HandleRaycast(this))
                     {
-                        SetCursor(CursorType.Combat);
+                        SetCursor(raycastable.GetCursorType());
                         return true;
                     }
                 }
             }
             return false;
         }
+
+        
 
         // Como fazer a movimentação para ela não travar em objetos que estiverem na frente do terreno
         private bool InteractWithMovement()
