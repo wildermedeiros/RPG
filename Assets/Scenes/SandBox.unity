@@ -6967,6 +6967,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &586894158 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 103302, guid: f65a7bee03bbc4542a4af2c67922b549,
+    type: 3}
+  m_PrefabInstance: {fileID: 1260503290}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &594792907
 GameObject:
   m_ObjectHideFlags: 0
@@ -17537,6 +17543,19 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1260503290}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1260503294
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586894158}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.093932, y: 3.294759, z: 4.0519433}
+  m_Center: {x: 0.00000059604645, y: 1.6473795, z: -1.7763568e-14}
 --- !u!1 &1273181547
 GameObject:
   m_ObjectHideFlags: 0
