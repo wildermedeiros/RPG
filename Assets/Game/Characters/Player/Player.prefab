@@ -84,6 +84,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 521672951560188107, guid: 80edb026e783d224f8771fbd9ea8ab9d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1687059877901610045, guid: 80edb026e783d224f8771fbd9ea8ab9d,
         type: 3}
       propertyPath: uniqueIdentifier
@@ -262,6 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b50eeac897743404188ec7c9a4450169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxNavPathLenght: 40
   cursorMapping:
   - cursorType: 0
     texture: {fileID: 2800000, guid: 21628736160fcc9488493401da3ef621, type: 3}
