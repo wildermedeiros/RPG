@@ -4,12 +4,20 @@ using RPG.Stats;
 using RPG.Core;
 using System;
 using GameDevTV.Utils;
+using UnityEngine.Events;
 
 namespace RPG.Resources
 {
     public class Health : MonoBehaviour, ISaveable
     {
         [SerializeField] float regenerationPercentage = 80f;
+        [SerializeField] TakeDamageEvent onTakeDamage;
+
+        [System.Serializable]
+        public class TakeDamageEvent : UnityEvent<float>
+        {
+
+        }
 
         LazyValue<float> healthPoints;
         bool isDead = false;
@@ -53,6 +61,7 @@ namespace RPG.Resources
         {
 //            print(gameObject.name + " took damage: " + damage);
 
+            onTakeDamage.Invoke(damage);
             healthPoints.value = Mathf.Max(healthPoints.value - damage, 0); 
             if (healthPoints.value == 0)
             {
