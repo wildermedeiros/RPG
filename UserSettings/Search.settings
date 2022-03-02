@@ -7,7 +7,7 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
-	"last_search.785D90A9" = "una"
+	"last_search.785D90A9" = "facing"
 	"OpenInspectorPreview.785D90A9" = "0"
 	"currentGroup.785D90A9" = "all"
 	"last_search.83F126EB" = "prog"
@@ -87,6 +87,7 @@ providers = {
 	}
 }
 recentSearches = [
+	"c"
 	"r"
 	"f"
 	"pr"

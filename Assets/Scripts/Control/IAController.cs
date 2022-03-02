@@ -3,7 +3,7 @@ using System.Collections;
 using RPG.Combat;
 using RPG.Movement;
 using RPG.Core;
-using RPG.Resources;
+using RPG.Attributes;
 using GameDevTV.Utils;
 
 // TODO checar o porque da animação da caveirinha não estar rolando
