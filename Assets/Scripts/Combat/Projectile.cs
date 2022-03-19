@@ -1,5 +1,6 @@
 ﻿using RPG.Attributes;
 using UnityEngine;
+using UnityEngine.Events;
 
 // TODO IDEIAS 
 //              Sticky arrows 
@@ -14,6 +15,7 @@ namespace RPG.Combat
         [SerializeField] float maxLifeTime = 10f;
         [SerializeField] GameObject[] destroyOnHit = null;
         [SerializeField] float lifeTimeAfterImpact = 2f;
+        [SerializeField] UnityEvent onHit;
 
         float damage = 0;
         GameObject instigator;
@@ -63,6 +65,7 @@ namespace RPG.Combat
             target.TakeDamage(instigator, damage);
 
             speed = 0;
+            onHit.Invoke();
 
             if (hitEffect != null)
             {
@@ -70,6 +73,9 @@ namespace RPG.Combat
                 //Quaternion.LookRotation(target.transform.forward, target.transform.up)
             }
 
+            /* é interessante desabilitar o collider do projétil quando houver colisão, 
+            *  pois conforme o lifeTimeAfterImpact, o collider pode atrapalhar, até o objeto ser destruído
+            */
             foreach (var toDestroy in destroyOnHit)
             {
                 Destroy(toDestroy);

@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Skeleton Bone
   m_EditorClassIdentifier: 
   animatorOverride: {fileID: 0}
-  equippedPrefab: {fileID: 4169519742799379023, guid: 6ec0a08f2a3e7e6499c43d34800846be,
+  equippedPrefab: {fileID: 5501574988251076898, guid: 6ec0a08f2a3e7e6499c43d34800846be,
     type: 3}
   weaponDamage: 8
+  percentageBonus: 0
   weaponRange: 5
   isRightHanded: 1
   projectile: {fileID: 0}

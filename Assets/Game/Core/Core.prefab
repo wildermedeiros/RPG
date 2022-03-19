@@ -1,5 +1,45 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5934088165347197348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3538848512504722855}
+  - component: {fileID: 6318219791630124807}
+  m_Layer: 0
+  m_Name: Microfone Listener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3538848512504722855
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5934088165347197348}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.0002617836, y: 0.0042891502, z: 14.346851}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7668682571784449009}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &6318219791630124807
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5934088165347197348}
+  m_Enabled: 1
 --- !u!1 &7668682571385790584
 GameObject:
   m_ObjectHideFlags: 0
@@ -60,7 +100,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7668682571784449009}
   - component: {fileID: 7668682571784449014}
-  - component: {fileID: 7668682571784449015}
   - component: {fileID: 7668682571784449008}
   m_Layer: 0
   m_Name: Main Camera
@@ -80,7 +119,8 @@ Transform:
   m_LocalPosition: {x: -39.09221, y: 17.750704, z: -77.53005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 3538848512504722855}
   m_Father: {fileID: 7668682572345215655}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -109,7 +149,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 70
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -127,14 +167,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &7668682571784449015
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7668682571784449012}
-  m_Enabled: 1
 --- !u!114 &7668682571784449008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3224,11 +3256,6 @@ PrefabInstance:
       propertyPath: defaultWeaponName
       value: Sword
       objectReference: {fileID: 0}
-    - target: {fileID: 1399553790522343846, guid: 78a26854d7e4fbe449220902e7337e16,
-        type: 3}
-      propertyPath: timeBetweenAttacks
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 1779439043933728313, guid: 78a26854d7e4fbe449220902e7337e16,
         type: 3}
       propertyPath: healthPoints
@@ -3292,11 +3319,6 @@ PrefabInstance:
     - target: {fileID: 9206368834289414166, guid: 78a26854d7e4fbe449220902e7337e16,
         type: 3}
       propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 9206368834289414166, guid: 78a26854d7e4fbe449220902e7337e16,
-        type: 3}
-      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []

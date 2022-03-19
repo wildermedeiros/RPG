@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: 2Handed Skeleton Sword
   m_EditorClassIdentifier: 
   animatorOverride: {fileID: 22100000, guid: f134183059ca7bb438fcd22ad8e0a476, type: 2}
-  equippedPrefab: {fileID: 7666843140648376996, guid: 46ba82a83566ed949ae675e361d932cd,
+  equippedPrefab: {fileID: 1361191137773216717, guid: 46ba82a83566ed949ae675e361d932cd,
     type: 3}
   weaponDamage: 20
+  percentageBonus: 0
   weaponRange: 4
   isRightHanded: 1
   projectile: {fileID: 0}

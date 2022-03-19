@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Bow Multiple Projectiles
   m_EditorClassIdentifier: 
   animatorOverride: {fileID: 0}
-  equippedPrefab: {fileID: 4568984370340360013, guid: 164e29120916df149a07bb2ff94e8927,
+  equippedPrefab: {fileID: 1925008045794284935, guid: 164e29120916df149a07bb2ff94e8927,
     type: 3}
   weaponDamage: 10
+  percentageBonus: 0
   weaponRange: 30
   isRightHanded: 1
   projectile: {fileID: 0}
