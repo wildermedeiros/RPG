@@ -4973,7 +4973,7 @@ GameObject:
   - component: {fileID: 4837697295640255531}
   - component: {fileID: 2746706712455635293}
   m_Layer: 0
-  m_Name: Weapon Pickup
+  m_Name: Root Pickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
