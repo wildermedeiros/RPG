@@ -76,12 +76,12 @@ Material:
     - _MBAmplitude: 0.5
     - _MBAmplitudeOffset: 3
     - _MBDefaultBending: 0
-    - _MBFrequency: 0.2
+    - _MBFrequency: 0.075
     - _MBFrequencyOffset: 0.1
     - _MBMaxHeight: 0.4
     - _MBPhase: 10
     - _MBWindBlend: 0
-    - _MBWindDir: 90
+    - _MBWindDir: 360
     - _MBWindDirOffset: 69
     - _Metallic: 0
     - _Mode: 0
