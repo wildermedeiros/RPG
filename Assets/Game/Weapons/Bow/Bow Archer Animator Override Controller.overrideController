@@ -7,7 +7,14 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Bow Archer Animator Override Controller
-  m_Controller: {fileID: 9100000, guid: 01a87576c6015ed4fb289c2d8d3e96f5, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4a0a875cf13ac664e91c7be2bc8db4fe, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: 7400000, guid: 51cfa47fe9aad3f45a2982743d0a0f3d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: b3b55707c080031498b4a73507227e0c, type: 3}
+    m_OverrideClip: {fileID: -4847777627775502037, guid: b1db32bf678632d4795b4299bce3da68,
+      type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 1cb8ed3cbba15f0479fbae54e0a963df, type: 3}
+    m_OverrideClip: {fileID: 7400000, guid: 4ab1fdda55b6ec741be4e45123b61c51, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: b1a5e04ae51004842aba06704a6c2903, type: 3}
+    m_OverrideClip: {fileID: 7400000, guid: e06e423f87596234390a6dbf4209b064, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: a9287ecdd9ec3fc4b94ec184593cbb5f, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: a9287ecdd9ec3fc4b94ec184593cbb5f, type: 2}
