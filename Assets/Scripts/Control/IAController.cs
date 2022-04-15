@@ -5,8 +5,7 @@ using RPG.Movement;
 using RPG.Core;
 using RPG.Attributes;
 using GameDevTV.Utils;
-
-// TODO checar o porque da animação da caveirinha não estar rolando
+using System;
 
 namespace RPG.Control
 {
@@ -14,11 +13,13 @@ namespace RPG.Control
     {
         [SerializeField] float chaseDistance = 5f;
         [SerializeField] float suspicionTime = 5f;
+        [SerializeField] float aggroCooldownTime = 8f;
         [SerializeField] float waypointDwellTime = 3f;
         [SerializeField] PatrolPath patrolPath;
         [SerializeField] float waypointTollerance = 2f;
         [Range(0,1)]
         [SerializeField] float patrolSpeedFraction = 0.2f;
+        [SerializeField] float shoutDistance = 5f;
 
         GameObject player;
         Fighter fighter;
@@ -29,6 +30,8 @@ namespace RPG.Control
         LazyValue<Vector3> guardPosition;
         float timeSinceLastSawPlayer = Mathf.Infinity;
         float timeSinceArrivedAtWaypoint = Mathf.Infinity;
+        // Colocar o infinity aqui, causa a todos os inimigos do mapa virem me bater, com essa condiçaão invertida  if(timeSinceAggrevated < aggrevatedTime)
+        float timeSinceAggrevated = Mathf.Infinity;
         int currentWaypointIndex = 0;
 
         private void Awake() 
@@ -54,7 +57,7 @@ namespace RPG.Control
         {
             if (health.IsDead()) { return; }
 
-            if (InAttackRangeOfPlayer() && fighter.CanAttack(player.gameObject))
+            if (IsAggrevated() && fighter.CanAttack(player.gameObject))
             {
                 AttackBehaviour();
             }
@@ -69,10 +72,16 @@ namespace RPG.Control
             UpdateTimers();
         }
 
+        public void Aggrevated()
+        {
+            timeSinceAggrevated = 0;
+        }
+
         private void UpdateTimers()
         {
             timeSinceArrivedAtWaypoint += Time.deltaTime;
             timeSinceLastSawPlayer += Time.deltaTime;
+            timeSinceAggrevated += Time.deltaTime;
         }
 
         private void PatrolBehaviour()
@@ -120,6 +129,22 @@ namespace RPG.Control
         {
             timeSinceLastSawPlayer = 0;
             fighter.Attack(player.gameObject);
+
+            AggrevatedNearbyEnemies();
+        }
+
+        private void AggrevatedNearbyEnemies()
+        {
+            RaycastHit[] hits = Physics.SphereCastAll(transform.position, shoutDistance, Vector3.up, 0);
+            foreach (RaycastHit hit in hits)
+            {
+                IAController enemy = hit.transform.GetComponent<IAController>();
+                if (enemy == null) { continue; }
+                
+                enemy.Aggrevated();
+                
+            }
+
         }
 
         private IEnumerator SuspicioningThePlayer()
@@ -127,9 +152,10 @@ namespace RPG.Control
             yield return new WaitForSeconds(suspicionTime);
         }
 
-        private bool InAttackRangeOfPlayer()
+        private bool IsAggrevated()
         {
-            return Vector3.Distance(player.transform.position, transform.position) < chaseDistance;
+            return Vector3.Distance(player.transform.position, transform.position) < chaseDistance 
+            || timeSinceAggrevated < aggroCooldownTime;
         }
 
         private void OnDrawGizmos() 

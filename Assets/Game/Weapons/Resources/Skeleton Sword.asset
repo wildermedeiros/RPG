@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Skeleton Sword
   m_EditorClassIdentifier: 
   animatorOverride: {fileID: 0}
-  equippedPrefab: {fileID: 2773999881903400650, guid: eadbe69370cb95c41b09dacc3d883680,
+  equippedPrefab: {fileID: 1624489364591807346, guid: b2fe98b30a0d7f84babd0677cfcb8f44,
     type: 3}
   weaponDamage: 10
   percentageBonus: 0

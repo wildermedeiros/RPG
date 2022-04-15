@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 954545786, guid: 80edb026e783d224f8771fbd9ea8ab9d, type: 3}
       propertyPath: maxSpeed
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 954545787, guid: 80edb026e783d224f8771fbd9ea8ab9d, type: 3}
       propertyPath: m_Speed
@@ -77,6 +77,41 @@ PrefabInstance:
       propertyPath: healthPoints
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 6689085447115435748, guid: 80edb026e783d224f8771fbd9ea8ab9d,
+        type: 3}
+      propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689085447115435748, guid: 80edb026e783d224f8771fbd9ea8ab9d,
+        type: 3}
+      propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689085447115435748, guid: 80edb026e783d224f8771fbd9ea8ab9d,
+        type: 3}
+      propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 5853976370807194017}
+    - target: {fileID: 6689085447115435748, guid: 80edb026e783d224f8771fbd9ea8ab9d,
+        type: 3}
+      propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689085447115435748, guid: 80edb026e783d224f8771fbd9ea8ab9d,
+        type: 3}
+      propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Aggrevated
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689085447115435748, guid: 80edb026e783d224f8771fbd9ea8ab9d,
+        type: 3}
+      propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: RPG.Control.IAController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689085447115435748, guid: 80edb026e783d224f8771fbd9ea8ab9d,
+        type: 3}
+      propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6970333599910844770, guid: 80edb026e783d224f8771fbd9ea8ab9d,
         type: 3}
       propertyPath: m_RootOrder
@@ -135,7 +170,7 @@ PrefabInstance:
     - target: {fileID: 7834823722919838017, guid: 80edb026e783d224f8771fbd9ea8ab9d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7834823722919838017, guid: 80edb026e783d224f8771fbd9ea8ab9d,
         type: 3}
@@ -184,10 +219,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chaseDistance: 10
   suspicionTime: 5
+  aggroCooldownTime: 8
   waypointDwellTime: 3
   patrolPath: {fileID: 0}
   waypointTollerance: 2
   patrolSpeedFraction: 0.7
+  shoutDistance: 5
 --- !u!114 &9002382051705591669
 MonoBehaviour:
   m_ObjectHideFlags: 0

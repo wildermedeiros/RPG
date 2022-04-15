@@ -12,7 +12,8 @@ namespace RPG.Movement
         Animator animator;
         Health health; 
         
-        [SerializeField] float maxSpeed = 10; 
+        [SerializeField] float maxSpeed = 10;
+        [SerializeField] float maxNavPathLenght = 40f;
 
         private void Awake() 
         {
@@ -34,19 +35,22 @@ namespace RPG.Movement
             UpdateAnimator();
         }
 
-        private void UpdateAnimator()
-        {
-            Vector3 velocity = navMeshAgent.velocity;
-            Vector3 localVelocity = transform.InverseTransformDirection(velocity).normalized;
-            float speed = localVelocity.z;
-
-            animator.SetFloat("forwardSpeed", speed);
-        }
-
         public void StartMoveAction(Vector3 destination, float speedFraction)
         {
             GetComponent<ActionScheduler>().StartAction(this);
             MoveTo(destination, speedFraction);
+        }
+
+        public bool CanMoveTo(Vector3 destination)
+        {
+            NavMeshPath path = new NavMeshPath();
+            bool hasPath = NavMesh.CalculatePath(transform.position, destination, NavMesh.AllAreas, path);
+            if (!hasPath) { return false; }
+            if (path.status != NavMeshPathStatus.PathComplete) { return false; }
+
+            if (GetPathLenght(path) > maxNavPathLenght) { return false; }
+
+            return true;
         }
 
         public void MoveTo(Vector3 destination, float speedFraction)
@@ -59,6 +63,27 @@ namespace RPG.Movement
         public void Cancel()
         {
             navMeshAgent.isStopped = true;
+        }
+
+        private void UpdateAnimator()
+        {
+            Vector3 velocity = navMeshAgent.velocity;
+            Vector3 localVelocity = transform.InverseTransformDirection(velocity).normalized;
+            float speed = localVelocity.z;
+
+            animator.SetFloat("forwardSpeed", speed);
+        }
+
+        private float GetPathLenght(NavMeshPath path)
+        {
+            float totalDistance = 0;
+            if (path.corners.Length > 2) { return totalDistance; }
+
+            for (int i = 0; i < path.corners.Length - 1; i++)
+            {
+                totalDistance += Vector3.Distance(path.corners[i], path.corners[i + 1]);
+            }
+            return totalDistance;
         }
 
         public object CaptureState()
