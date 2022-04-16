@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Skeleton Knight Override
+  m_Controller: {fileID: 9100000, guid: f0c6ee41d239d3e49a3604629f4c3e5e, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: -4847777627775502037, guid: 0c16cb1c1956d6e4ab7756249d85d85c,
+      type: 3}
+    m_OverrideClip: {fileID: 7400000, guid: fc79cd7f43dd8cf48938a30b51b7bf89, type: 3}
+  - m_OriginalClip: {fileID: -4847777627775502037, guid: b1db32bf678632d4795b4299bce3da68,
+      type: 3}
+    m_OverrideClip: {fileID: 7400000, guid: 1fc39c37ef49990448d906d00f43bac2, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 1111c303e393ade49997c8e70bee7677, type: 3}
+    m_OverrideClip: {fileID: 7400000, guid: 1111c303e393ade49997c8e70bee7677, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: c451515cb9060534bb1d1c6801a798b9, type: 3}
+    m_OverrideClip: {fileID: 7400000, guid: c451515cb9060534bb1d1c6801a798b9, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 9a26352c93a81e947b73b8e47cc931bb, type: 3}
+    m_OverrideClip: {fileID: 7400000, guid: 4dc448ac47a91c6428de3a7af494b625, type: 3}

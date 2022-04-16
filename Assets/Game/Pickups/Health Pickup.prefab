@@ -82,6 +82,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Health Pickup
       objectReference: {fileID: 0}
+    - target: {fileID: 6902519947570634586, guid: dee6316cd790b3c4f8b401a69afb4f50,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.92
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dee6316cd790b3c4f8b401a69afb4f50, type: 3}
 --- !u!4 &3639212739333633674 stripped
