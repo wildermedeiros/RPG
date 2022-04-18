@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using RPG.Saving;
 using RPG.Attributes;
+using UnityEngine.Events;
 
 namespace RPG.Movement
 {
@@ -14,6 +15,8 @@ namespace RPG.Movement
         
         [SerializeField] float maxSpeed = 10;
         [SerializeField] float maxNavPathLenght = 40f;
+        [SerializeField] UnityEvent onLFootMovement;
+        [SerializeField] UnityEvent onRFootMovement;
 
         private void Awake() 
         {
@@ -63,6 +66,18 @@ namespace RPG.Movement
         public void Cancel()
         {
             navMeshAgent.isStopped = true;
+        }
+
+        public void LFootEvent()
+        {
+            //onLFootMovement.Invoke();
+            print("Left movement");
+        }
+
+        public void RFootEvent()
+        {
+            onRFootMovement.Invoke();
+            print("Right movement");
         }
 
         private void UpdateAnimator()
