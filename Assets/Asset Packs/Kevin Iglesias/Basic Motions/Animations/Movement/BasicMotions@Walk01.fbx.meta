@@ -580,14 +580,14 @@ ModelImporter:
       curves: []
       events:
       - time: 0.13615023
-        functionName: RFootEvent
+        functionName: 
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
       - time: 0.59624416
-        functionName: LFootEvent
+        functionName: 
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

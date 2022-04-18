@@ -70,7 +70,7 @@ namespace RPG.Movement
 
         public void LFootEvent()
         {
-            //onLFootMovement.Invoke();
+            onLFootMovement.Invoke();
             print("Left movement");
         }
 
