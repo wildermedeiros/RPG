@@ -44,7 +44,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1ba2f3391cdbf104d9b9f9d8f7a25677, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.0625
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -398,6 +398,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 6
   maxNavPathLenght: 40
+  onLFootMovement:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6054465024758872392}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onRFootMovement:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3796077269992960362}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6271692828423700859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -606,7 +636,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: fab9818b663f91b44a4100248852761d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.0625
   m_Pitch: 1
   Loop: 0
   Mute: 0

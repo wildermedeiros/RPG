@@ -71,13 +71,11 @@ namespace RPG.Movement
         public void LFootEvent()
         {
             onLFootMovement.Invoke();
-            print("Left movement");
         }
 
         public void RFootEvent()
         {
             onRFootMovement.Invoke();
-            print("Right movement");
         }
 
         private void UpdateAnimator()

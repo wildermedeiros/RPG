@@ -43,10 +43,20 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: f0c6ee41d239d3e49a3604629f4c3e5e, type: 2}
+    - target: {fileID: 3796077269992960362, guid: 80edb026e783d224f8771fbd9ea8ab9d,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.03125
+      objectReference: {fileID: 0}
     - target: {fileID: 4298164721139429579, guid: 80edb026e783d224f8771fbd9ea8ab9d,
         type: 3}
       propertyPath: m_Name
       value: Skeleton Knight
+      objectReference: {fileID: 0}
+    - target: {fileID: 6054465024758872392, guid: 80edb026e783d224f8771fbd9ea8ab9d,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.03125
       objectReference: {fileID: 0}
     - target: {fileID: 6271692828423700859, guid: 80edb026e783d224f8771fbd9ea8ab9d,
         type: 3}
