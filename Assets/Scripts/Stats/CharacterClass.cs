@@ -10,6 +10,7 @@ namespace RPG.Stats
         Assasin,
         Paladin, 
         EnemySkeleton, 
-        EnemySkeletonKing  
+        EnemySkeletonKing,
+        Zombie  
     }
 }

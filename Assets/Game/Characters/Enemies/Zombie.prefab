@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 954545786, guid: 80edb026e783d224f8771fbd9ea8ab9d, type: 3}
       propertyPath: maxSpeed
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 954545787, guid: 80edb026e783d224f8771fbd9ea8ab9d, type: 3}
       propertyPath: m_Speed
@@ -23,16 +23,26 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 2129233209416223484, guid: 80edb026e783d224f8771fbd9ea8ab9d,
+        type: 3}
+      propertyPath: MinDistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2129233209416223484, guid: 80edb026e783d224f8771fbd9ea8ab9d,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: cd4bb67f8578a0946ab9801cfbff8869, type: 3}
     - target: {fileID: 2400180993923352723, guid: 80edb026e783d224f8771fbd9ea8ab9d,
         type: 3}
       propertyPath: MinDistance
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2400180993923352723, guid: 80edb026e783d224f8771fbd9ea8ab9d,
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: fec27ab11f6bd06498c4acddeda4efb6, type: 3}
+      objectReference: {fileID: 8300000, guid: 0ff08c0d7bd531b41b0607535b6c7b85, type: 3}
     - target: {fileID: 3375331519400296577, guid: 80edb026e783d224f8771fbd9ea8ab9d,
         type: 3}
       propertyPath: m_RootOrder
@@ -113,13 +123,13 @@ PrefabInstance:
     - target: {fileID: 6271692828423700859, guid: 80edb026e783d224f8771fbd9ea8ab9d,
         type: 3}
       propertyPath: timeBetweenAttacks
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6271692828423700859, guid: 80edb026e783d224f8771fbd9ea8ab9d,
         type: 3}
       propertyPath: defaultWeaponConfig
       value: 
-      objectReference: {fileID: 11400000, guid: 7a5d15e39c9cb264d8fd58a1ab28855a,
+      objectReference: {fileID: 11400000, guid: c0b121f28bada5646aaf1801d3f46532,
         type: 2}
     - target: {fileID: 6689085447115435748, guid: 80edb026e783d224f8771fbd9ea8ab9d,
         type: 3}
@@ -224,7 +234,7 @@ PrefabInstance:
     - target: {fileID: 7834823722919838017, guid: 80edb026e783d224f8771fbd9ea8ab9d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7834823722919838017, guid: 80edb026e783d224f8771fbd9ea8ab9d,
         type: 3}
@@ -244,7 +254,7 @@ PrefabInstance:
     - target: {fileID: 9113520014359599873, guid: 80edb026e783d224f8771fbd9ea8ab9d,
         type: 3}
       propertyPath: characterClass
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -281,14 +291,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d213759429318d46b2b4220cec4f9d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaseDistance: 10
+  chaseDistance: 5
   suspicionTime: 5
-  aggroCooldownTime: 8
+  aggroCooldownTime: 5
   waypointDwellTime: 3
   patrolPath: {fileID: 0}
   waypointTollerance: 2
   patrolSpeedFraction: 0.7
-  shoutDistance: 5
+  shoutDistance: 3
 --- !u!114 &9002382051705591669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,7 +330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4378302944070100, guid: 46e3fad9d63edad4e95366d675950f78, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4378302944070100, guid: 46e3fad9d63edad4e95366d675950f78, type: 3}
       propertyPath: m_LocalPosition.x

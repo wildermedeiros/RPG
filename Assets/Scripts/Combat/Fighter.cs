@@ -45,6 +45,7 @@ namespace RPG.Combat
 
             if (!GetIsInRange(target.transform))
             {
+                StopAttack();
                 GetComponent<Mover>().MoveTo(target.transform.position, 1f);
             }
             else
