@@ -86,11 +86,6 @@ PrefabInstance:
       propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3402913453122239829, guid: dee6316cd790b3c4f8b401a69afb4f50,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3839624645236877284, guid: dee6316cd790b3c4f8b401a69afb4f50,
         type: 3}
       propertyPath: m_RootOrder
@@ -188,11 +183,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Weapon Pickup Bow
-      objectReference: {fileID: 0}
-    - target: {fileID: 8682261656596459340, guid: dee6316cd790b3c4f8b401a69afb4f50,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8978087415530606836, guid: dee6316cd790b3c4f8b401a69afb4f50,
         type: 3}
