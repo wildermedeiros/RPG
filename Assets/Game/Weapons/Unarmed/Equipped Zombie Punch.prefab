@@ -48,9 +48,9 @@ MonoBehaviour:
   onHit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 872405025238413351}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
+      - m_Target: {fileID: 122418198027783041}
+        m_TargetAssemblyTypeName: ClipRandomizer, Assembly-CSharp
+        m_MethodName: PlayRandomClip
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -70,6 +70,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8936881382047104971}
   - component: {fileID: 872405025238413351}
+  - component: {fileID: 122418198027783041}
   m_Layer: 0
   m_Name: Hit Sound
   m_TagString: Untagged
@@ -188,3 +189,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &122418198027783041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6815170449499747614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11e0f0c28df87eb4694df83f7f120b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: bb13136ea4d0127498854f0c050b70bf, type: 3}
+  - {fileID: 8300000, guid: 5386e2fd73e9fd64ba503ff8aa21a378, type: 3}
+  - {fileID: 8300000, guid: c7b14744f4cfb0e4d9e55f2c71362532, type: 3}
+  randomizerPitch: 1
+  pitch: {x: 1, y: 1.2}

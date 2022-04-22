@@ -11,6 +11,30 @@ PrefabInstance:
       propertyPath: maxSpeed
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 954545786, guid: 80edb026e783d224f8771fbd9ea8ab9d, type: 3}
+      propertyPath: onLFootMovement.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8200514829531761739}
+    - target: {fileID: 954545786, guid: 80edb026e783d224f8771fbd9ea8ab9d, type: 3}
+      propertyPath: onRFootMovement.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4339382727519954063}
+    - target: {fileID: 954545786, guid: 80edb026e783d224f8771fbd9ea8ab9d, type: 3}
+      propertyPath: onLFootMovement.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayRandomClip
+      objectReference: {fileID: 0}
+    - target: {fileID: 954545786, guid: 80edb026e783d224f8771fbd9ea8ab9d, type: 3}
+      propertyPath: onRFootMovement.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayRandomClip
+      objectReference: {fileID: 0}
+    - target: {fileID: 954545786, guid: 80edb026e783d224f8771fbd9ea8ab9d, type: 3}
+      propertyPath: onLFootMovement.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ClipRandomizer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 954545786, guid: 80edb026e783d224f8771fbd9ea8ab9d, type: 3}
+      propertyPath: onRFootMovement.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ClipRandomizer, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 954545787, guid: 80edb026e783d224f8771fbd9ea8ab9d, type: 3}
       propertyPath: m_Speed
       value: 8
@@ -22,6 +46,11 @@ PrefabInstance:
     - target: {fileID: 954545787, guid: 80edb026e783d224f8771fbd9ea8ab9d, type: 3}
       propertyPath: m_Radius
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2129233209416223484, guid: 80edb026e783d224f8771fbd9ea8ab9d,
+        type: 3}
+      propertyPath: MinDistance
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2400180993923352723, guid: 80edb026e783d224f8771fbd9ea8ab9d,
         type: 3}
@@ -61,7 +90,7 @@ PrefabInstance:
     - target: {fileID: 3796077269992960362, guid: 80edb026e783d224f8771fbd9ea8ab9d,
         type: 3}
       propertyPath: m_Volume
-      value: 0.03125
+      value: 0.0625
       objectReference: {fileID: 0}
     - target: {fileID: 4298164721139429579, guid: 80edb026e783d224f8771fbd9ea8ab9d,
         type: 3}
@@ -71,7 +100,7 @@ PrefabInstance:
     - target: {fileID: 6054465024758872392, guid: 80edb026e783d224f8771fbd9ea8ab9d,
         type: 3}
       propertyPath: m_Volume
-      value: 0.03125
+      value: 0.0625
       objectReference: {fileID: 0}
     - target: {fileID: 6271692828423700859, guid: 80edb026e783d224f8771fbd9ea8ab9d,
         type: 3}
@@ -133,9 +162,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6689085447115435748, guid: 80edb026e783d224f8771fbd9ea8ab9d,
         type: 3}
+      propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 560343762875282626}
+    - target: {fileID: 6689085447115435748, guid: 80edb026e783d224f8771fbd9ea8ab9d,
+        type: 3}
+      propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayRandomClip
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689085447115435748, guid: 80edb026e783d224f8771fbd9ea8ab9d,
+        type: 3}
       propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6689085447115435748, guid: 80edb026e783d224f8771fbd9ea8ab9d,
+        type: 3}
+      propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 7717512516543055104}
     - target: {fileID: 6689085447115435748, guid: 80edb026e783d224f8771fbd9ea8ab9d,
         type: 3}
       propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Target
@@ -148,8 +192,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6689085447115435748, guid: 80edb026e783d224f8771fbd9ea8ab9d,
         type: 3}
+      propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayRandomClip
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689085447115435748, guid: 80edb026e783d224f8771fbd9ea8ab9d,
+        type: 3}
       propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
       value: Aggrevated
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689085447115435748, guid: 80edb026e783d224f8771fbd9ea8ab9d,
+        type: 3}
+      propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ClipRandomizer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689085447115435748, guid: 80edb026e783d224f8771fbd9ea8ab9d,
+        type: 3}
+      propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: ClipRandomizer, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6689085447115435748, guid: 80edb026e783d224f8771fbd9ea8ab9d,
         type: 3}
@@ -296,12 +355,106 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e6487b2598e814fb5419e9f303e101, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &3925316430312081260 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 530306414995783988, guid: 80edb026e783d224f8771fbd9ea8ab9d,
+    type: 3}
+  m_PrefabInstance: {fileID: 3541378110642374232}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4339382727519954063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3925316430312081260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11e0f0c28df87eb4694df83f7f120b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 1ba2f3391cdbf104d9b9f9d8f7a25677, type: 3}
+  randomizerPitch: 1
+  pitch: {x: 0.9, y: 1.1}
+--- !u!1 &4074901483730271826 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 696217289520494602, guid: 80edb026e783d224f8771fbd9ea8ab9d,
+    type: 3}
+  m_PrefabInstance: {fileID: 3541378110642374232}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7717512516543055104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4074901483730271826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11e0f0c28df87eb4694df83f7f120b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 7ef5f6ef2186ff943aae651e04a308f0, type: 3}
+  - {fileID: 8300000, guid: b478e70763eb9d84c948866de57df1f8, type: 3}
+  - {fileID: 8300000, guid: faf489fefa28a5a48a34682b035a3655, type: 3}
+  - {fileID: 8300000, guid: 04e21022e4b9d884c92c34233b492258, type: 3}
+  randomizerPitch: 1
+  pitch: {x: 0.8, y: 1.2}
+--- !u!1 &5829637698366966291 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7044342547573722187, guid: 80edb026e783d224f8771fbd9ea8ab9d,
+    type: 3}
+  m_PrefabInstance: {fileID: 3541378110642374232}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &560343762875282626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5829637698366966291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11e0f0c28df87eb4694df83f7f120b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 7ef5f6ef2186ff943aae651e04a308f0, type: 3}
+  - {fileID: 8300000, guid: b478e70763eb9d84c948866de57df1f8, type: 3}
+  - {fileID: 8300000, guid: faf489fefa28a5a48a34682b035a3655, type: 3}
+  - {fileID: 8300000, guid: 04e21022e4b9d884c92c34233b492258, type: 3}
+  randomizerPitch: 1
+  pitch: {x: 0.8, y: 1.2}
 --- !u!4 &5881166589105610554 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6970333599910844770, guid: 80edb026e783d224f8771fbd9ea8ab9d,
     type: 3}
   m_PrefabInstance: {fileID: 3541378110642374232}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &9047894952290385231 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5527346269372005143, guid: 80edb026e783d224f8771fbd9ea8ab9d,
+    type: 3}
+  m_PrefabInstance: {fileID: 3541378110642374232}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8200514829531761739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9047894952290385231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11e0f0c28df87eb4694df83f7f120b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: fab9818b663f91b44a4100248852761d, type: 3}
+  randomizerPitch: 1
+  pitch: {x: 0.9, y: 1.1}
 --- !u!1001 &5826296566985598017
 PrefabInstance:
   m_ObjectHideFlags: 0
