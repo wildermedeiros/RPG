@@ -41,7 +41,11 @@ namespace RPG.Combat
             timeSinceLastAttack += Time.deltaTime;
 
             if (target == null) return;
-            if (target.IsDead()) return;
+            if (target.IsDead()) 
+            {
+                StopAttack();
+                return;
+            }
 
             if (!GetIsInRange(target.transform))
             {
@@ -76,6 +80,12 @@ namespace RPG.Combat
         public void HitEvent() 
         {
             if(target == null || target.IsDead()) { return; }
+
+            if (!GetIsInRange(target.transform))
+            {
+                StopAttack();
+                return;
+            }
 
             float damage = GetComponent<BaseStats>().GetStat(Stat.Damage);
 
